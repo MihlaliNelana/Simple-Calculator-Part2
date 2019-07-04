@@ -9,8 +9,9 @@ class Calculator {
             this.num = result;
             return result;
         };
+    }
         
-        this.multiply = function(){
+        multiply = function(){
             var result = 1;
             for(var j = 0; j < arguments.length; j++){
                 result *= parseFloat(arguments[j]);
@@ -19,18 +20,16 @@ class Calculator {
             return result;
         };
 
-        this.last = function(){
+        last = function(){
             return this.num;
         }
 
-        this.set_slot = function(){
+        set_slot = function(){
             this.slotArr.push(this.last());
             return this.slotArr[arguments[0]-1];
         }
 
-        this.get_slot = function(){
+        get_slot = function(){
             return this.slotArr[arguments[0]-1];
         }
     }
-}
-let calculator = new Calculator();
